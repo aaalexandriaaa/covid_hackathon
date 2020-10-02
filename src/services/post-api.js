@@ -27,3 +27,10 @@ export function getUserPosts(id) {
   }, { mode: "cors" })
     .then(res => res.json())
 }
+
+export function getPostsForZip() {
+  return fetch(`${baseUrl}`, {
+    headers: { 'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken() },
+  }, { mode: "cors" })
+    .then(res => res.json())
+}

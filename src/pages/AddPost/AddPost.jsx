@@ -9,7 +9,7 @@ class AddPost extends Component {
     formData: {
       name: '',
       description: '',
-      category: '',
+      type: '',
       img: ''
     }
   }
@@ -53,7 +53,7 @@ class AddPost extends Component {
           </div><br />
           <div>
             <Form.Label >Post Category</Form.Label><br></br>
-            <Form.Control as='select' name="category" onChange={this.handleChange} value={this.state.formData.public} required>
+            <Form.Control as='select' name="type" onChange={this.handleChange} value={this.state.formData.public} required>
               <option value="technology">Technology</option>
               <option value="supplies">School Supplies</option>
               <option value="clothing">Clothing</option>

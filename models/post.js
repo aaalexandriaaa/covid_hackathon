@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
   title: String,
   owner: { type: Schema.Types.ObjectId, ref: 'User' },
   claimed: { type: Schema.Types.ObjectId, ref: 'User' },
-  body: String,
+  description: String,
   type: String,
   image: String
 }, {

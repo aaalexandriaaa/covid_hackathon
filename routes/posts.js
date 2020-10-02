@@ -3,7 +3,8 @@ const postsCtrl = require('../controllers/posts')
 
 // Public Routes
 router.get('/', postsCtrl.index);
-router.get('/project/:id', postsCtrl.viewPosts);
+router.get('/:id', postsCtrl.viewPosts);
+router.get('/posts', postsCtrl.viewPostsByZip);
 
 // Protected Routes
 router.use(require('../config/auth'));

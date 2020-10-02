@@ -10,7 +10,8 @@ const NavBar = ({ user, handleLogout }) => {
           {user.organization ?
             <>
               <Nav.Link href=" " >Welcome, {user.name}</Nav.Link>
-              <Nav.Link href="/invitation" >Invitation Page</Nav.Link>
+              {/* <Nav.Link href="/invitation" >Invitation Page</Nav.Link> */}
+              <Nav.Link href="/posts" >View All Posts</Nav.Link>
               <Nav.Link href="/viewresponses" >View Responses</Nav.Link>
               <Nav.Link href="/addpost" >Add A Post</Nav.Link >
               <Nav.Link href=" " onClick={handleLogout}>Log Out</Nav.Link >
@@ -19,7 +20,7 @@ const NavBar = ({ user, handleLogout }) => {
             <>
               <Nav.Link href=" " >Welcome, {user.name}</Nav.Link>
               <Nav.Link href="/welcome" >Welcome</Nav.Link >
-              <Nav.Link href="/viewposts" >View Posts</Nav.Link >
+              <Nav.Link href="/posts" >View All Posts</Nav.Link>
               <Nav.Link href=" " onClick={handleLogout}>Log Out</Nav.Link >
             </>
           }

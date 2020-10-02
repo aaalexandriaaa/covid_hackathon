@@ -10,7 +10,7 @@ import Invitation from "../../pages/Invitation/Invitation"
 import Welcome from "../../pages/Welcome/Welcome"
 import ViewPosts from "../../pages/ViewPosts/ViewPosts"
 import AddPost from "../../pages/AddPost/AddPost"
-import ViewResponses from "../../pages/ViewResponses/ViewResponses"
+import Posts from "../../pages/Posts/Posts"
 
 class App extends Component {
   state = {
@@ -85,11 +85,14 @@ class App extends Component {
         />
         <Route
           exact
-          path="/viewposts"
-          render={({ match }) => (
+          path="/posts/:id"
+          render={({ match, history, location }) => (
             user ?
               <ViewPosts
                 match={match}
+                history={history}
+                location={location}
+                user={this.state.user}
               />
               :
               <Redirect to="/login" />)}
@@ -109,10 +112,15 @@ class App extends Component {
         />
         <Route
           exact
-          path="/viewresponses"
-          render={() => (
+          path="/posts"
+          render={({ match, location, history }) => (
             user ?
-              <ViewResponses />
+              <Posts
+                match={match}
+                history={history}
+                location={location}
+                user={this.state.user}
+              />
               :
               <Redirect to="/login" />)}
         />

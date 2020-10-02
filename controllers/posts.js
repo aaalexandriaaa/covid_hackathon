@@ -3,12 +3,13 @@ const Post = require('../models/post')
 module.exports = {
   index,
   create,
-  viewPosts
+  viewPosts,
+  viewPostsByZip
 }
 
 function viewPosts(req, res) {
+  console.log("THIS IS HARD")
   Post.findById(req.params.id)
-    .populate('images')
     .then((post) => { res.json(post) })
     .catch(err => { res.json(err) })
 }
@@ -25,4 +26,11 @@ function index(req, res) {
   Post.find({})
     .then(posts => { res.json(posts) })
     .catch(err => { res.json(err) })
+}
+
+function viewPostsByZip(req, res) {
+  console.log("HELLO HELLO")
+  // Post.find({ zipcode: req.user.zipcode })
+  //   .then(post => { res.json(post) })
+  //   .catch(err => { res.json(err) })
 }
