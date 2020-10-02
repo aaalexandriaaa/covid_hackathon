@@ -16,7 +16,7 @@ class Posts extends Component {
 
     render() {
         return (
-            <>
+            <div className="text">
                 {this.state.posts.map((post, idx) =>
                     <Link
                         key={idx}
@@ -26,11 +26,11 @@ class Posts extends Component {
                         }}
                     >
                         <div >
-                            <p>Name: {post.description ? post.description : post.name} </p>
+                            <p>{post.description ? post.description : post.name} </p>
                         </div>
                     </Link>
                 )}
-            </>
+            </div>
         );
     }
 }

@@ -1,6 +1,11 @@
 body {
-  background-color: #F2C94C;
+  background-color: #F4A862;
+  color: rgb(0,0,0, .9);
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  color: rgb(0,0,0, .7);
 }
 
 main {
@@ -17,10 +22,36 @@ main {
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  background-color: #6153cc53;
+  background-color: #f3bc45;
   font-family: 'Lora', serif;
 }
 
-.nav div {
+h1{
+  text-align: center;
+}
+
+.form-div div {
+  text-align: center;
+  padding: 10px;
+}
+
+/* .nav {
   margin: 0 10px;
+} */
+
+.padding {
+  padding: 15px;
+}
+
+.form-div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.text {
+  text-align: center;
+  padding: 10px;
 }

@@ -20,7 +20,7 @@ class AddPost extends Component {
   handleAddPost = async newPostData => {
     console.log("ADDPOST")
     await postAPI.create(newPostData)
-      .then(() => this.props.history.push(`/posts/${this.props.user._id}`))
+      .then(() => this.props.history.push(`/posts`))
     console.log("POSTADDED")
   }
 
@@ -62,7 +62,7 @@ class AddPost extends Component {
             </Form.Control>
           </div><br />
           <div>
-            <Form.Label style={{ padding: '5px' }}>Image Url</Form.Label>
+            <Form.Label style={{ padding: '5px' }}>Image Url</Form.Label><br />
             <Form.Control name="img" type="text" value={this.state.formData.url} onChange={this.handleChange} required />
           </div><br />
           <Button
